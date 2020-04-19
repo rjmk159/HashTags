@@ -1,0 +1,76 @@
+body{
+  font-family: 'Nunito', sans-serif!important;
+  background: #f8f8f8;
+}
+.fixed-background {
+  background: url(/public/images/balloon.jpg) no-repeat 50% fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ml-auto, .mx-auto {
+  margin-left: auto;
+}
+
+.mb-auto, .my-auto {
+  margin-bottom: auto;
+}
+.mr-auto, .mx-auto {
+  margin-right: auto;
+}
+.mt-auto, .my-auto {
+  margin-top: auto;
+}
+.text-icpa {
+  color: #922c88;
+}
+
+.btn{
+  border-radius: 50px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15),0 1px 3px 1px rgba(0,0,0,.15);
+  &-primary {
+    color: #fff;
+    background-color: #922c88;
+    border-color: #922c88;
+    min-width: 120px;
+    font-size: .8rem;
+    &:hover {
+      color: #fff;
+      background-color: #73236b;
+      border-color: #73236b;
+    }
+  }
+}
+
+.flex-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-title {
+  font-size: 1.1rem;
+}
+label {
+  color: rgba(48,48,48,.7);
+  font-size:10px;
+}
+.pull-right{
+  float:right;
+}
+.pull-none{
+  float:none;
+}
+a {
+  color: #303030;
+  &:active, &:hover {
+    text-decoration: none;
+    text-decoration: initial;
+    color: #922c88;
+  }
+}

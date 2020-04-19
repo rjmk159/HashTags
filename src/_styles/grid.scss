@@ -1,0 +1,29 @@
+@import './helpers.scss';
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+.row-fluid {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+@each $key, $value in $breakpoints {
+  @for $i from $items through 1 {
+    .grid__item--#{$key}-span-#{$i} {
+      flex: 0 0 100%;
+      width:  100%;
+      max-width: 100%;
+      @include break($key) {
+        flex: 0 0 #{$i / $items * 100%};
+        width: 100%;
+        max-width: #{$i / $items * 100%};
+      }
+    }
+  }
+}
