@@ -8,3 +8,4 @@ export const navMenus = [
   { name: "Contact Us", url: "/dashboard/contact-us" },
   { name: "Grievance Section", url: "/dashboard/grevience-section" },
 ];
+ export const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

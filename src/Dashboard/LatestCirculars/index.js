@@ -5,6 +5,7 @@ import Content from '../Components/Content'
 
 
 export function LatestCirculars() {
+  
   return (
     <Content  title="Latest Circulars">
       

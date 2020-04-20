@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/styles.scss";
@@ -12,6 +12,9 @@ export function MainApp({ status }) {
   return (
     <Router>
       <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
         <Route path="/register">
           <Register />
         </Route>

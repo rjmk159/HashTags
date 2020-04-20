@@ -20,7 +20,6 @@ export const {
 } = actions;
 
 export const setActiveSidebar = (data) => async (dispatch) => {
-  console.log(data)
   dispatch(setSidebar({ status: data }));
  
 };
