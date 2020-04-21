@@ -17,7 +17,7 @@ export function MainSidebar({ status }) {
           return (
             <li className={`nav-item${index === 0 ? " active" : ""}`}>
             <Link to={item.url} className={item.name === state.active ? "active" : ""}>
-              <i className="iconsminds-shop-4"></i> <span>{item.name}</span>
+              <i className="fa fa-user"></i> <span>{item.name}</span>
             </Link>
           </li>
           )

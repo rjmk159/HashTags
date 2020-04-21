@@ -9,4 +9,59 @@
   height: 100px;
   padding: 1rem 0;
   box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+  &.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    z-index: 110;
+  }
+}
+
+body {
+  padding-top: 100px;
+}
+.notification{
+  &__list {
+    background: #fff;
+    width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    right: 0;
+    top: calc(100% + 10px);
+    &.card{
+      position: absolute;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 10px;
+          border-bottom: 1px solid rgba(69, 85, 172, 0.24);
+          &:last-child {
+            border-bottom:0;
+          }
+          i {
+            color: #922d87;
+          }
+        }
+      }
+      
+    }
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #922d87;
+  }
+  &__container {
+    position: absolute;
+    right: 100px;
+  }
 }

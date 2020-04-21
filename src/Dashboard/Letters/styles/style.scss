@@ -1,0 +1,26 @@
+*:focus {
+  outline: none;
+}
+.search {
+  &__form {
+    width: 100%;
+    max-width: 600px;
+    .btn--secondary {
+      border: 0;
+    }
+  }
+}
+.letter {
+  &__thumbnail {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__add {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+}
