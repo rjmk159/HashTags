@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import {  useDispatch ,useSelector} from "react-redux";
+import { logout } from '../../../Login/slices'
 
 import "./styles/styles.scss";
 export function Navbar() {
   const [notification, setNotification] = useState(false);
+
+  const state = useSelector((_state) => _state.dataLogin);
+  const dispatch = useDispatch()
   const handleNotification = () =>{
     setNotification(!notification);
   }
@@ -19,6 +23,11 @@ export function Navbar() {
   <div className="notification__icon" role="botton" onClick={handleNotification}>
     <i className="fa fa-bell"></i>
   </div>
+  <div className="notification__icon" role="botton" onClick={()=>dispatch(logout())}>
+    <i className="fa fa-user"></i>
+  </div>
+  {/* {state.token.userData?<span>Welcome! {state.token.userData.firstName}</span>:''} */}
+
 {notification?
   <div className="notification__list card">
     <ul>

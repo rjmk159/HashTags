@@ -17,7 +17,7 @@ const { actions, reducer } = createSlice({
   },
 });
 export default reducer;
-export const { setToken } = actions;
+export const { setToken,setLoader } = actions;
 
 export const checkLogin = (email, password, callback) => (dispatch) => {
   try {
@@ -47,4 +47,9 @@ export const registerUser = (obj, callback) => (dispatch) => {
         callback(true);
       });
   } catch (_error) {}
+};
+
+export const logout = () =>  (dispatch) => {
+  localStorage.removeItem('icpa_token')
+  dispatch(setToken({ token: null }));
 };

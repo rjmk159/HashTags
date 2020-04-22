@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
 import PropTypes from "prop-types";
 import "./styles/style.scss";
 import Card from "./components/Card";
@@ -23,6 +23,7 @@ export function Register() {
   const [dob, setDob] = useState("");
   const [gender, setgender] = useState("male");
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,6 +58,9 @@ export function Register() {
             toast.error("Something went wrong");
           } else {
             toast.success("Success! Proceed to Login");
+            setTimeout(() => {
+              history.push('/login')
+            }, 1500);
           }
         })
       );

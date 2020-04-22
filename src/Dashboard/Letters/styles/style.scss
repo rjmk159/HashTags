@@ -12,8 +12,21 @@
 }
 .letter {
   &__thumbnail {
-    margin-bottom: 30px;
     text-align: center;
+    height: 100%;
+    padding-bottom: 40px;
+    img{
+      max-width: 60px;
+      margin-bottom: 10px;
+    }
+    .btn{
+      position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 60%;
+    bottom: 20px;
+    }
   }
   &__add {
     position: fixed;
@@ -22,5 +35,27 @@
     width: 50px;
     height: 50px;
     font-size: 21px;
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      opacity: 0;
+      z-index: 11;
+      cursor: pointer;
+    }
+    i{
+      top: 16px;
+      position: absolute;
+      left: 18px;
+      z-index: -1;
+      cursor: pointer;
+    }
   }
+}
+
+.col-md-2 {
+  margin-bottom: 30px;
 }

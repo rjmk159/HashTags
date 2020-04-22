@@ -6,7 +6,16 @@ import Register from "../Login/Register";
 import Login from "../Login/Login";
 import ForgotPassword from "../Login/ForgotPassword";
 import ResetPassword from "../Login/ResetPassword";
-import Dashboard from "../Dashboard/";
+import Dashboard, {
+  LetterDashboard,
+  LatestCircularsDashboard,
+  LatestNewsDashboard,
+  MembershipDashboard,
+  PaymentsDashboard,
+  OnlineFormsDashboard,
+  ContactUsDashboard,
+  GrevienceSectionDashboard,
+} from "../Dashboard/";
 
 export function MainApp({ status }) {
   return (
@@ -27,9 +36,22 @@ export function MainApp({ status }) {
         <Route path="/reset-password">
           <ResetPassword />
         </Route>
-        <Route path="/dashboard">
-          <Dashboard />
+        <Route path="/letters">
+          <LetterDashboard />
         </Route>
+        <Route path="/latest-circulars" component={LatestCircularsDashboard} />
+
+        <Route path={`/latest-news`} component={LatestNewsDashboard} />
+
+        <Route path={`/membership`} component={MembershipDashboard} />
+
+        <Route path={`/payments`} component={PaymentsDashboard} />
+
+        <Route path={`/online-forms`} component={OnlineFormsDashboard} />
+
+        <Route path={`/contact-us`} component={ContactUsDashboard} />
+
+        <Route path={`/grevience-section`} component={GrevienceSectionDashboard} />
       </Switch>
     </Router>
   );

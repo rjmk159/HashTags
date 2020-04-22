@@ -23,7 +23,7 @@ export function Login() {
   useEffect(() => {
     let token = localStorage.getItem("icpa_token") || state.token;
     if (token) {
-      history.push("/dashboard/letter");
+      history.push("/letters");
     }
   }, []);
   const handleSubmit = (e) => {
@@ -40,7 +40,7 @@ export function Login() {
           if (error) {
             toast.error("Invalid credentials");
           } else {
-            history.push("/dashboard/letter");
+            history.push("/letters");
           }
         })
       );
