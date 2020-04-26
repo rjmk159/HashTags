@@ -1,6 +1,9 @@
 body {
   font-family: "Nunito", sans-serif !important;
   background: #f8f8f8;
+  &.dashboard {
+    padding-top: 100px;
+  }
 }
 .fixed-background {
   background: url(/public/images/balloon.jpg) no-repeat 50% fixed;
@@ -80,6 +83,16 @@ label {
 .pull-none {
   float: none;
 }
+.mb-30 {
+  margin-bottom: 30px;
+}
+.align-center {
+  text-align: center;
+  width: 100%;
+}
+.p-50 {
+  padding: 50px;
+}
 a {
   color: #303030;
   &:active,
@@ -96,4 +109,18 @@ a {
 }
 .Toastify__progress-bar--animated {
   display: none;
+}
+.page-link{
+  color: #4556ac;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #922d86;
+  border-color: #922d86;
+}
+.modal-visible {
+  display: block;
+  background: rgba(0,0,0,0.7);
 }

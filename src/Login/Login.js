@@ -51,7 +51,7 @@ export function Login() {
     <div className="h-100">
       <ToastContainer />
       <div className="fixed-background"></div>
-      <div class="flex-center">
+      <div className="flex-center">
         <div className="mx-auto my-auto col-md-6">
           <Card title={"Login"}>
             <div id="login">

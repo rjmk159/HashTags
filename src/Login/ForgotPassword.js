@@ -8,7 +8,7 @@ export function ResetPassword() {
   return (
     <div className="h-100">
       <div className="fixed-background"></div>
-      <div class="flex-center">
+      <div className="flex-center">
         <div className="mx-auto my-auto col-md-6">
           <Card title={"Reset password"}>
             <div id="login">

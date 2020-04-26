@@ -17,13 +17,14 @@ const { actions, reducer } = createSlice({
   },
 });
 export default reducer;
-export const { setToken,setLoader } = actions;
+export const { setToken, setLoader } = actions;
 
 export const checkLogin = (email, password, callback) => (dispatch) => {
   try {
     login(email, password)
       .then((res) => {
         if (res.data.ok) {
+          localStorage.setItem('icpa_token',res.data.result.jwtToken)
           dispatch(setToken({ token: res.data.result }));
           callback(false);
         }

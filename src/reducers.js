@@ -1,12 +1,16 @@
 import { combineReducers } from 'redux';
 import dataLogin from './Login/slices';
-import dataMain from './Main/slices';
-import dataSidebar from './Dashboard/slices'
+import dataDashboard from './Dashboard/slices'
+import dataLetters from './Dashboard/Letters/slices';
+import dataCirculars from './Dashboard/LatestCirculars/slices';
+import dataOnlineForms from './Dashboard/LatestCirculars/slices'
 
 const rootReducer = combineReducers({
-  dataMain,
+  dataDashboard,
   dataLogin,
-  dataSidebar
+  dataLetters,
+  dataCirculars,
+  dataOnlineForms,
 });
 
 export default rootReducer;

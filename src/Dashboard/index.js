@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+// https://www.getpostman.com/collections/f0d134d430194dbfc594
+import BodyClassName from 'react-body-classname';
 import { useHistory } from "react-router-dom";
 import "./styles/style.scss";
 import MainSidebar from "./Components/MainSidebar";
@@ -14,7 +16,6 @@ import LatestCirculars from "./LatestCirculars";
 import ContactUs from "./ContactUs";
 import Payments from "./Payments";
 
-const url = "/dashboard";
 export function Dashboard({ children }) {
   const state = useSelector((_state) => _state.dataLogin);
   let history = useHistory();
@@ -25,6 +26,7 @@ export function Dashboard({ children }) {
     }
   });
   return (
+    <BodyClassName className="dashboard">
     <div className="dashboard">
       <Navbar />
       <div className="sidebar">
@@ -32,6 +34,7 @@ export function Dashboard({ children }) {
       </div>
       <div className="content">{children}</div>
     </div>
+    </BodyClassName>
   );
 }
 Dashboard.propTypes = {

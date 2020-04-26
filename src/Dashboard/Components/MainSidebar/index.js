@@ -11,23 +11,26 @@ import {
 
 export function MainSidebar({ status }) {
   const dispatch = useDispatch();
-  const state = useSelector((_state) => _state.dataSidebar);
-  
+  const state = useSelector((_state) => _state.dataDashboard);
+  const handleClick = (e) => {
+  console.log(e.target.scrollTop)
+  //  dispatch(setActiveSidebar(item.name))
+  }
   return (
+    state.isSideBar ?
     <div className="main-menu">
       <ul className="list-unstyled nav flex-column">
         {navMenus.map((item, index) => {
-            console.log(state.active===item.name)
           return (
-            <li key = {index} onClick={()=>dispatch(setActiveSidebar(item.name))} className={`nav-item${item.name === state.active ? " active" : ""}`}>
-            <Link to={item.url} className={item.name === state.active ? "active" : ""}>
+            <li key = {index} onClick={handleClick} className={`nav-item${item.url === window.location.pathname  ? " active" : ""}`}>
+            <Link to={item.url} className={item.url === window.location.pathname ? "active" : ""}>
               <i className="fa fa-user"></i> <span>{item.name}</span>
             </Link>
           </li>
           )
         })}
       </ul>
-    </div>
+    </div> : null
   );
 }
 MainSidebar.propTypes = {
