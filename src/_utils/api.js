@@ -1,6 +1,6 @@
 import axios from "axios";
 import { listCount } from '../_const/const'
-const BASE_URL = "http://localhost:5555";
+export const BASE_URL = "http://localhost:5555";
 
 export const login = (email, password) => {
   return new Promise((resolve, reject) => {

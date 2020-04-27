@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { upload ,list, download} from '../../../_utils/api';
 import store from '../../../store';
 
-
 const { actions, reducer } = createSlice({
   name: 'dataCirculars',
   initialState: {

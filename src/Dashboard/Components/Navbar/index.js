@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import socketIOClient from "socket.io-client";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../Login/slices";
 import  {showSidebar}  from "../../slices";
+import { BASE_URL } from '../../../_utils/api';
 import "./styles/styles.scss";
 export function Navbar() {
   const [notification, setNotification] = useState(false);
@@ -12,6 +14,12 @@ export function Navbar() {
   const handleNotification = () => {
     setNotification(!notification);
   };
+  useEffect(() => {
+    const socket = socketIOClient(BASE_URL);
+    socket.on("notificationForAll", data => {
+      console.log(data)
+    });
+  }, []);
   const toggleSideBar = () => {
     dispatch(showSidebar(!sideBarState.isSideBar))
   }

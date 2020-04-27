@@ -126,7 +126,7 @@ export function Letters() {
             list.currentPage === count ? "disabled" : ""
           }`}
           onClick={
-            list.currentPage === list.count
+            list.currentPage === count
               ? null
               : () => getList(list.currentPage + 1)
           }
