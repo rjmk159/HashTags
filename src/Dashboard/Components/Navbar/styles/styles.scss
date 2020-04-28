@@ -23,23 +23,40 @@
     background: #fff;
     width: 300px;
     max-width: 300px;
-    padding: 10px;
     right: 80px;
     top: calc(100% + 10px);
     &.card{
       position: absolute;
+      max-height: 400px;
+      overflow: auto;
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
         li {
           padding: 10px;
           border-bottom: 1px solid rgba(69, 85, 172, 0.24);
-          &:last-child {
+          padding-left: 32px;
+          padding-right: 60px;
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          &:first-child {
             border-bottom:0;
           }
+          &:hover {
+            background: #ececec;
+            cursor: pointer;
+          }
           i {
-            color: #922d87;
+            color: rgba(69, 85, 172, 0.24);
+            position: absolute;
+            left: 8px;
+            top: 17px;
+            font-size: 14px;
+
           }
         }
       }
@@ -56,6 +73,21 @@
     justify-content: center;
     cursor: pointer;
     color: #922d87;
+    position: relative;
+  }
+  &__count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: red;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border-radius: 20px;
   }
   &__container {
     position: absolute;
@@ -64,5 +96,46 @@
     align-items: center;
     justify-content: space-between;
     width: 100px;
+  }
+  &__name {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__label {
+    text-transform: CAPITALIZE;
+    font-size: 10px;
+    background: #4555ac;
+    color: #fff;
+    margin-right: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  &__uploadedBy {
+    display: block;
+    font-size: 10px;
+    color: #922d86;
+ }
+ &__unread {
+    background: rgba(206, 206, 206, 0.12);
+    font-weight: 700;
+    i {
+      color: rgba(69, 85, 172, 1)!important;
+    }
+  }
+  &__time {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-top: 2px;
   }
 }

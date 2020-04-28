@@ -71,3 +71,32 @@ export const download = (id,authToken) => {
       });
   });
 };
+
+export const notificationList = (authToken) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${BASE_URL}/me/getMyNotficationList?pageSize=100&pageNum=1`, { headers: {
+        Authorization: authToken
+      }})
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
+export const markAsRead = (id,authToken) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`${BASE_URL}/me/markAsRead?docId=${id}`, { headers: {
+        Authorization: authToken
+      }})
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};

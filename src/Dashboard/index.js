@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-// https://www.getpostman.com/collections/f0d134d430194dbfc594
 import BodyClassName from 'react-body-classname';
 import { useHistory } from "react-router-dom";
 import "./styles/style.scss";

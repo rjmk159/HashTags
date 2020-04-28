@@ -10,3 +10,13 @@ export const navMenus = [
 ];
  export const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
  export const listCount = 20;
+ export const urlMap = {
+  "letters": "letters",
+  "letter": "letters",
+  "circulars": "latest-circulars",
+  "circular": "latest-circulars",
+  "online-forms": "online-forms",
+  "onlineforms": "online-forms",
+  "online_forms": "online-forms",
+  "onlineForms": "online-forms",
+};
